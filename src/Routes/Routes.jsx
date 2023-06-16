@@ -2,6 +2,7 @@ import {
     createBrowserRouter
 } from "react-router-dom";
 import Main from "../Layout/Main";
+import Addatoy from "../Pages/Addatoy/Addatoy";
 import AllToys from "../Pages/AllToys/AllToys";
 import SingleToy from "../Pages/AllToys/SingleToy/SingleToy";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
@@ -36,6 +37,10 @@ import PrivateRoute from "./PrivateRoute";
             path:'toy/:id',
             element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
             loader:({params})=>fetch(`http://localhost:5000/cars/toy/${params.id}`),
+        },
+        {
+            path:'addatoy',
+            element:<Addatoy></Addatoy>
         }
       ]
     },

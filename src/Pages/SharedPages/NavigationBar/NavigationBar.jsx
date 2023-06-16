@@ -59,7 +59,7 @@ const NavigationBar = () => {
                 My Toys
               </NavLink>
               <NavLink
-                href="#"
+                to='/addatoy'
                 className="block md:mt-0 md:inline-block mt-2  text-white hover:text-gray-400"
               >
                 Add A Toy
