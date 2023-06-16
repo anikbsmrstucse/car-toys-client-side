@@ -20,6 +20,7 @@
     "react-icons": "^4.9.0",
     "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.13.0",
+    "react-tabs": "^6.0.1",
     "sweetalert2": "^11.7.12"
   },
   "devDependencies": {

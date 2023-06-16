@@ -24,7 +24,7 @@ const NavigationBar = () => {
     return <div className="h-[100vh] flex items-center justify-center"><span className="loading loading-ring loading-lg"></span></div>
   }
   return (
-    <div>
+    <div className="sticky top-0">
       <nav className="bg-gray-800 text-white p-4 relative">
         <div className="flex items-center justify-between">
           <span className="text-2xl font-bold">

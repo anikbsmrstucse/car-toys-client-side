@@ -8,8 +8,9 @@ const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [toys, myToys] = useState([]);
   const location = useLocation();
-  const { new_id } = location.state;
-  console.log(new_id);
+//   const { new_id } = location?.state;
+console.log(location);
+//   console.log(new_id);
 
   const [loading, setlaoding] = useState(true);
   useEffect(() => {
