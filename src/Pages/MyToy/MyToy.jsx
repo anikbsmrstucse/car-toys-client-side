@@ -8,8 +8,8 @@ const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [toys, myToys] = useState([]);
   const location = useLocation();
-  const {new_id} = location.state;
-  
+  const { new_id } = location.state;
+  console.log(new_id);
 
   const [loading, setlaoding] = useState(true);
   useEffect(() => {
@@ -26,6 +26,10 @@ const MyToy = () => {
       .catch((error) => {
         console.error("Error fetching toy data:", error);
       });
+  };
+
+  const handleUpdate = (id) => {
+    console.log(id);
   };
 
   const handledelete = (id) => {
@@ -108,14 +112,16 @@ const MyToy = () => {
                 {toy?.available_quantity}
               </td>
               <td>
-                <Link state={{new_id:toy._id}}>
-                  <a
-                    href="#my_modal_8"
+                <div>
+                  <label
+                    htmlFor="my_modal_6"
                     className="btn btn-circle btn-outline btn-success"
                   >
-                    <FaPen></FaPen>
-                  </a>
-                </Link>
+                    <Link state={{ new_id: toy._id }}>
+                      <FaPen></FaPen>
+                    </Link>
+                  </label>
+                </div>
               </td>
               <td>
                 <button
@@ -129,7 +135,11 @@ const MyToy = () => {
           </tbody>
         ))}
       </table>
-      <div className="modal" id="my_modal_8">
+      {/* The button to open modal */}
+            {/* TODO:my toy update funtional */}
+      {/* Put this part before </body> tag */}
+      <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+      <div className="modal">
         <div className="modal-box">
           <form onSubmit={() => handleUpdate(new_id)}>
             <div className="form-control w-full max-w-xs border-primary">
@@ -171,24 +181,15 @@ const MyToy = () => {
               className="btn btn-primary btn-outline mt-5"
             />
           </form>
-
           <div className="modal-action">
-            <a href="#" className="btn">
-              Yay!
-            </a>
+            <label htmlFor="my_modal_6" className="btn">
+              Close!
+            </label>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-{
-  /* The button to open modal */
-}
-
-{
-  /* Put this part before </body> tag */
-}
 
 export default MyToy;
