@@ -14,34 +14,33 @@ const SocialSignIn = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
         const saveInfo = {
-          name: loggedUser.displayName,
-          email: loggedUser.email,
-          role: "student",
+          name: loggedUser?.displayName,
+          email: loggedUser?.email,
         };
-        // fetch("https://language-school-assignment-12-server-anikbsmrstucse.vercel.app/users", {
-        //   method: "POST",
-        //   headers: {
-        //     "content-type": "application/json",
-        //   },
-        //   body: JSON.stringify(saveInfo),
-        // })
-        //   .then((res) => res.json())
-        //   .then((data) => {
-        //     console.log(data);
-        //     if (data.insertedId) {
-        //       Swal.fire({
-        //         title: "Register Successfully",
-        //         icon: "success",
-        //         showClass: {
-        //           popup: "animate__animated animate__fadeInDown",
-        //         },
-        //         hideClass: {
-        //           popup: "animate__animated animate__fadeOutUp",
-        //         },
-        //       });
-        //       navigate(from,{replace:true});
-        //     }
-        //   });
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(saveInfo),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.insertedId) {
+              Swal.fire({
+                title: "Register Successfully",
+                icon: "success",
+                showClass: {
+                  popup: "animate__animated animate__fadeInDown",
+                },
+                hideClass: {
+                  popup: "animate__animated animate__fadeOutUp",
+                },
+              });
+              navigate(from,{replace:true});
+            }
+          });
       })
       .catch((error) => {
         console.log(error);

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import SocialSignIn from "../Pages/SharedPages/SocialSignIn/SocialSignIn";
 
@@ -41,6 +42,31 @@ const Register = () => {
               name: name,
               email: email,
             };
+            fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(saveUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.insertedId) {
+              Swal.fire({
+                title: "Register Successfully",
+                icon: "success",
+                showClass: {
+                  popup: "animate__animated animate__fadeInDown",
+                },
+                hideClass: {
+                  popup: "animate__animated animate__fadeOutUp",
+                },
+              });
+            }
+            navigate('/');
+            reset();
+          });
           });
         })
         .catch((error) => {
