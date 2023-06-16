@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
@@ -38,6 +39,9 @@ const AllToys = () => {
   }
   return (
     <div className="overflow-x-auto">
+        <Helmet>
+            <title>Toys Cars | All Toys</title>
+        </Helmet>
       <h1 className="text-3xl font-bold py-10 text-center">Toy List</h1>
       <table className="min-w-full bg-white">
         <thead>

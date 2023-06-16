@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaEye } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -48,6 +49,9 @@ const Login = () => {
 
   return (
     <div className="py-5 mb-5 mt-5">
+        <Helmet>
+            <title> Toys Cars | Login</title>
+        </Helmet>
       <div className="card w-full md:w-1/2 mx-auto shadow-lg bg-base-100">
         <h3 className="text-center text-2xl font-semibold mt-5">Login</h3>
         <form onSubmit={handleLogin} className="card-body">

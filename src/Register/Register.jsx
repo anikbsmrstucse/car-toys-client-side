@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
@@ -79,6 +80,9 @@ const Register = () => {
 
   return (
     <div className="py-5 mt-5 mb-5">
+        <Helmet>
+            <title>Toys Cars | Registration</title>
+        </Helmet>
       <div className="card w-full md:w-1/2 mx-auto shadow-lg bg-base-100">
         <h3 className="text-center text-2xl font-semibold mt-5">Register</h3>
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">

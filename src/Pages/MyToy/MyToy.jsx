@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaPen, FaTrash } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -67,6 +68,9 @@ console.log(location);
 
   return (
     <div className="overflow-x-auto py-10">
+        <Helmet>
+            <title>Toys Cars | My Toy</title>
+        </Helmet>
       <h1 className="text-3xl font-bold py-10 text-center">My Toy List</h1>
       <table className="min-w-full mx-auto bg-white">
         <thead>

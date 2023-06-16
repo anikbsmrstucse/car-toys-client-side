@@ -4,3 +4,10 @@
     background-repeat: no-repeat;
     height: 600px;
 }
+
+@media screen and (min-width: 578px) {
+    .banner-img{
+        height: auto;
+        width: 100%;
+    }
+}

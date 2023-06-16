@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { FaCar } from "react-icons/fa";
 import Swal from "sweetalert2";
@@ -59,6 +60,9 @@ const Addatoy = () => {
   };
   return (
     <div className="md:w-3/5 w-full mx-auto py-10 my-5">
+        <Helmet>
+            <title>Toys Cars | Add Toy</title>
+        </Helmet>
       <h1 className="text-3xl text-center font-bold">Add A Toy</h1>
       <div className="divider"></div>
       <div className="w-full bg-gray-300 shadow-xl py-10">
