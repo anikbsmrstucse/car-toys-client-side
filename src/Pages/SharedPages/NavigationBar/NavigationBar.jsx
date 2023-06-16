@@ -6,7 +6,7 @@ import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user, logOut, loading } = useContext(AuthContext);
+  const { user, logOut,loading} = useContext(AuthContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,7 +20,9 @@ const NavigationBar = () => {
     })
   }
  
-
+  if(loading){
+    return <div className="h-[100vh] flex items-center justify-center"><span className="loading loading-ring loading-lg"></span></div>
+  }
   return (
     <div>
       <nav className="bg-gray-800 text-white p-4 relative">
