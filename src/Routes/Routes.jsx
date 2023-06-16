@@ -2,6 +2,7 @@ import {
     createBrowserRouter
 } from "react-router-dom";
 import Main from "../Layout/Main";
+import AllToys from "../Pages/AllToys/AllToys";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -24,6 +25,10 @@ import Register from "../Register/Register";
         {
             path:'register',
             element:<Register></Register>
+        },
+        {
+            path:'alltoys',
+            element:<AllToys></AllToys>
         }
       ]
     },
