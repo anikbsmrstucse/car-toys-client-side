@@ -38,7 +38,7 @@ const AllToys = () => {
     return <div className="h-[100vh] flex items-center justify-center"><span className="loading loading-ring loading-lg"></span></div>
   }
   return (
-    <div>
+    <div className="overflow-x-auto">
       <h1 className="text-3xl font-bold py-10 text-center">Toy List</h1>
       <table className="min-w-full bg-white">
         <thead>

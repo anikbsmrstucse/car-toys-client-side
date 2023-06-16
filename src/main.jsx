@@ -7,9 +7,11 @@ import "./fonts.css";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router}></RouterProvider>
-    </AuthProvider>
-  </React.StrictMode>
+  <div className="max-w-full mx-auto">
+    <React.StrictMode>
+      <AuthProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </AuthProvider>
+    </React.StrictMode>
+  </div>
 );
