@@ -28,7 +28,7 @@ const Footer = () => {
       </footer>
       <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
         <div className="items-center flex ml-5">
-        <img className="w-[40px] text-primary" src={logo} alt="" />
+        <img className="w-[40px] " src={logo} alt="" />
           <p>
             Toys Car Ltd. <br />
             Providing reliable tech since 1992
