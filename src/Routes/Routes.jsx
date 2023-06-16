@@ -46,7 +46,7 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
             path:"mytoy",
-            element:<MyToy></MyToy>
+            element:<PrivateRoute><MyToy></MyToy></PrivateRoute>
         },
         {
             path:'blog',
