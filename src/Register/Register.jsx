@@ -14,6 +14,8 @@ const Register = () => {
     setType(false);
   };
 
+  const from = location.state?.from?.pathname || "/";
+
   const { createUser, updateUser } = useContext(AuthContext);
   const [error, setError] = useState("");
 
@@ -64,7 +66,7 @@ const Register = () => {
                 },
               });
             }
-            navigate('/');
+            navigate(from, { replace: true });
             reset();
           });
           });

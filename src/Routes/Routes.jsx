@@ -3,10 +3,12 @@ import {
 } from "react-router-dom";
 import Main from "../Layout/Main";
 import AllToys from "../Pages/AllToys/AllToys";
+import SingleToy from "../Pages/AllToys/SingleToy/SingleToy";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -29,6 +31,11 @@ import Register from "../Register/Register";
         {
             path:'alltoys',
             element:<AllToys></AllToys>
+        },
+        {
+            path:'toy/:id',
+            element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
+            loader:({params})=>fetch(`http://localhost:5000/cars/toy/${params.id}`),
         }
       ]
     },
