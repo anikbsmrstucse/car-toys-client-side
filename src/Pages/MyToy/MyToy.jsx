@@ -19,7 +19,7 @@ console.log(location);
   }, []);
 
   const fetchToys = () => {
-    fetch(`http://localhost:5000/cars/mycar?email=${user?.email}`)
+    fetch(`https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/cars/mycar?email=${user?.email}`)
       .then((response) => response.json())
       .then((data) => {
         myToys(data);
@@ -36,7 +36,7 @@ console.log(location);
 
   const handledelete = (id) => {
     console.log(id);
-    fetch(`http://localhost:5000/cars/delete/${id}`, {
+    fetch(`https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/cars/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
