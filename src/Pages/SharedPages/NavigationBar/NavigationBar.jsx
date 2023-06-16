@@ -53,7 +53,7 @@ const NavigationBar = () => {
                 user ? 
                 <>
                 <NavLink
-                href="#"
+                to='mytoy'
                 className="block md:mt-0 md:inline-block mt-2 text-white hover:text-gray-400 mr-4"
               >
                 My Toys
@@ -70,7 +70,7 @@ const NavigationBar = () => {
               }
               
               <NavLink
-                href="#"
+                to='/blog'
                 className="block md:mt-0 md:inline-block mt-2 md:ml-4  text-white hover:text-gray-400"
               >
                 Blogs

@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const AllToys = () => {
 
-    const {user} = useContext(AuthContext);
-    const navigate = useNavigate();
+  const {user} = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 

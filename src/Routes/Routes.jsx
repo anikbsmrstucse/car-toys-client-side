@@ -5,9 +5,11 @@ import Main from "../Layout/Main";
 import Addatoy from "../Pages/Addatoy/Addatoy";
 import AllToys from "../Pages/AllToys/AllToys";
 import SingleToy from "../Pages/AllToys/SingleToy/SingleToy";
+import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
+import MyToy from "../Pages/MyToy/MyToy";
 import Register from "../Register/Register";
 import PrivateRoute from "./PrivateRoute";
 
@@ -40,7 +42,15 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
             path:'addatoy',
-            element:<Addatoy></Addatoy>
+            element:<PrivateRoute><Addatoy></Addatoy></PrivateRoute>
+        },
+        {
+            path:"mytoy",
+            element:<MyToy></MyToy>
+        },
+        {
+            path:'blog',
+            element:<Blog></Blog>
         }
       ]
     },
