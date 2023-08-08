@@ -21,7 +21,12 @@ const TabCard = ({item}) => {
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Login First'
             })
-            navigate('/login');
+            .then(result => {
+              if(result.isConfirmed){
+                navigate('/login');
+              }
+            })
+            
         }
     }
 

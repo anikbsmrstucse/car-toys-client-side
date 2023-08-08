@@ -8,7 +8,7 @@ const Tabsection = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch(`https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/cars`)
+    fetch(`https://toy-cars-assignment-11-server.vercel.app/cars`)
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);

@@ -45,7 +45,7 @@ const Register = () => {
               name: name,
               email: email,
             };
-            fetch("https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/users", {
+            fetch("https://toy-cars-assignment-11-server.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

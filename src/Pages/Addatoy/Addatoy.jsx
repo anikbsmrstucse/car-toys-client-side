@@ -34,7 +34,7 @@ const Addatoy = () => {
         detail_description,
         }
         console.log(saveInfo);
-        fetch(`https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/cars`,{
+        fetch(`https://toy-cars-assignment-11-server.vercel.app/cars`,{
             method:"POST",
             headers:{
                 "content-type":"application/json",

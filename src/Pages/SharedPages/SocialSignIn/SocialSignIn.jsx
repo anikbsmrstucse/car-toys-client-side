@@ -17,7 +17,7 @@ const SocialSignIn = () => {
           name: loggedUser?.displayName,
           email: loggedUser?.email,
         };
-        fetch("https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/users", {
+        fetch("https://toy-cars-assignment-11-server.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

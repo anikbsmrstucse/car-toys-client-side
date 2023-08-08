@@ -15,7 +15,7 @@ const AllToys = () => {
   }, [currentPage]);
 
   const fetchToys = (page) => {
-    fetch(`https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/cars?page=${page}`)
+    fetch(`https://toy-cars-assignment-11-server.vercel.app/cars?page=${page}`)
       .then((response) => response.json())
       .then((data) => {
         setToys(data);

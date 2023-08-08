@@ -38,7 +38,7 @@ import PrivateRoute from "./PrivateRoute";
         {
             path:'toy/:id',
             element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-            loader:({params})=>fetch(`https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/cars/toy/${params.id}`),
+            loader:({params})=>fetch(`https://toy-cars-assignment-11-server.vercel.app/cars/toy/${params.id}`),
         },
         {
             path:'addatoy',

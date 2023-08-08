@@ -36,7 +36,7 @@ console.log(location);
 
   const handledelete = (id) => {
     console.log(id);
-    fetch(`https://toy-cars-assignment-11-server-anikbsmrstucse.vercel.app/cars/delete/${id}`, {
+    fetch(`https://toy-cars-assignment-11-server.vercel.app/cars/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
